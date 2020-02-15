@@ -1,0 +1,82 @@
+.header-container {
+    .wrap {
+        display: inline-flex;
+        width: 100%;
+    }
+    .left {
+        float: left;
+        width: 33%;
+        @media only screen 
+        and (min-device-width : 0px) 
+        and (max-device-width : 1023px) {
+        }
+    }
+    .right {
+        float: right;
+        position: relative;
+        width: 34%;
+        @media only screen 
+        and (min-device-width : 0px) 
+        and (max-device-width : 767px) {
+            width: 33.4%;
+        }
+    }
+    .center {
+        display: inline-block;
+        position: relative;
+        width: 33%;
+        text-align: center;
+        margin-top: 15px;
+        @media only screen 
+        and (min-device-width : 0px) 
+        and (max-device-width : 767px) {
+            margin-top: 47px;
+        }
+        img {
+            height: 65px;
+            @media only screen 
+            and (min-device-width : 0px) 
+            and (max-device-width : 1023px) {
+                height: 45px;
+            }
+        }
+    }
+    .left {
+        display: inline-block;
+        .img-text {
+            background-color: #ddd;
+            padding: 5px;
+            .left-text {
+                display: inline-block;
+                padding-left: 10px;
+                P {
+                    line-height: 0.5;
+                }
+            }
+            img {
+                height: 45px;
+            }
+        }
+    }
+    .right {
+        display: inline-block;
+        .img-text {
+            padding: 5px;
+            background-color: #ddd;
+            text-align: right;
+            .right-text {
+                display: inline-block;
+                padding-right: 10px;
+                P {
+                    line-height: 0.5;
+                }
+            }
+            img {
+                height: 45px;
+            }
+        }
+    }
+    
+    .n20-logo {
+    }
+}

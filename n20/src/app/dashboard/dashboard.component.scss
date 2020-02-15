@@ -1,0 +1,21 @@
+.dashboard-wrapper {
+    display: grid;    
+    background-color: #eff;
+}
+.header-wrapper {
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #eff;
+}
+.nav-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 83px;
+    @media only screen 
+    and (min-device-width : 0px) 
+    and (max-device-width : 767px) {
+        top: 123px;
+    }
+}

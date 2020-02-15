@@ -1,0 +1,20 @@
+<div class="nav_container">
+    <a class="side_nav_option" (click)="toggleNav()">&#9776;</a>
+    <img src="../../../assets/search-24px.png"  class="nav_search" (click)="toggleSearchModal()"/> 
+    <div *ngIf="sideNavOpen" id="main-nav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" (click)="toggleNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div *ngIf="openSearchModal" class="search_container">
+        <div class="modal">
+            <div class="modal-content">
+                <input class="search_input" type="text" placeholder="Google Search"/>
+                <button class="search_button">SEARCH</button>
+                <span class="search-close" (click)="toggleSearchModal()">&times;</span>
+            </div>
+        </div>
+    </div>
+</div>
