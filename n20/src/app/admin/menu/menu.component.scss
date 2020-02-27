@@ -1,0 +1,47 @@
+.menu_container {
+    text-align: center;
+    min-height: 400px;
+
+    .options_container {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .button_container {
+        margin-top: 20px;
+
+        .operation_choice_button {
+            background-color: #0d5a0d;
+            color: #fff;
+            padding: 8px;
+            margin: 0 10px;
+            box-shadow: none;
+        }
+    }
+
+
+    .form_container {
+        margin: 20px;
+        background-color: #ddd;
+        color: #333;
+        text-align: center;
+        width: 70%;
+        display: inline-block;
+
+        .form_input {
+            display: block;
+            font-size: 17px;
+            margin-bottom: 10px;
+            text-align: center;
+            display: inline-block;
+
+            &.form_input_file {
+                font-size: 14px;
+            }
+        }      
+
+        .priority_options_container {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,4 +1,9 @@
 .footer-wrapper {
     background-color: #333;
     color: #eee;
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: sticky;
 }

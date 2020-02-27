@@ -9,6 +9,9 @@ import { HeaderComponent } from './dashboard/header/header.component';
 import { FooterComponent } from './dashboard/footer/footer.component';
 import { MainNavComponent } from './dashboard/main-nav/main-nav.component';
 import { InfoComponent } from './dashboard/info/info.component';
+import { AdminComponent } from './admin/admin.component';
+import { MenuComponent } from './admin/menu/menu.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { InfoComponent } from './dashboard/info/info.component';
     HeaderComponent,
     FooterComponent,
     MainNavComponent,
-    InfoComponent
+    InfoComponent,
+    AdminComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

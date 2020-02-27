@@ -8,20 +8,33 @@
         cursor: pointer;
     }
     .sidenav {
-        height: 100%; /* 100% Full-height */
+        height: auto; /* 100% Full-height */
+        padding-bottom: 50px;
         width: 33%; /* 0 width - change this with JavaScript */
         position: fixed; /* Stay in place */
         z-index: 1; /* Stay on top */
-        top: 80px; /* Stay at the top */
+        top: 112px; /* Stay at the top */
         left: 0;
         background-color: #333; /* Black*/
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 60px; /* Place content 60px from the top */
         transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
         @media only screen 
-        and (min-device-width : 0px) 
+        and (min-device-width : 401px) 
         and (max-device-width : 767px) {
-          top: 125px;
+          top: 202px;
+          width: 45%;
+        }
+        @media only screen 
+        and (min-device-width : 767px) 
+        and (max-device-width : 1000px) {
+          top: 164px;
+          width: 45%;
+        }
+        @media only screen 
+        and (min-device-width : 0px) 
+        and (max-device-width : 400px) {
+          top: 227px;
           width: 45%;
         }
       }
@@ -103,6 +116,7 @@ vertical-align: middle;
   font-size: 14px;
   font-family: cursive;
   width: 40%;
+  background-color: #def;
 }
 .search-close {
   font-size: 30px;

@@ -1,0 +1,134 @@
+<div class="menu_container">
+    <div class="options_container">
+        <h2>Select an option to Create, Update or Delete</h2>
+        <div class="button_container">
+            <button (click)="toggleCreateView()" class="operation_choice_button">Create</button>
+            <button (click)="toggleUpdateView()" class="operation_choice_button">Update</button>
+            <button (click)="toggleDeleteView()" class="operation_choice_button">Delete</button>
+        </div>
+    </div>
+    <div class="form_container">
+        <div *ngIf="showCreate">
+            <div class="create_container">
+                <h2>Create</h2>
+                <form [formGroup]="createForm" (ngSubmit)="onSubmitCreate(createForm.value)">
+                    <h3>
+                        Title
+                    </h3>
+                    <input class="form_input" formControlName="title" type="text">
+                    <h3>
+                        Description 
+                    </h3>
+                    <input class="form_input" formControlName="description" type="text">
+                    <div>
+                        <h3>
+                            Priority 
+                        </h3>
+                        <div class="priority_options_container">
+                            <input formControlName="priority" id="lowest" type="radio" name="priority" value="1" checked>
+                            <span>
+                                Lowest
+                            </span>
+                            <input formControlName="priority" id="low" type="radio" name="priority" value="2">
+                            <span>
+                                Low
+                            </span>
+                            <input formControlName="priority" id="medium" type="radio" name="priority" value="3">
+                            <span>
+                                Medium
+                            </span>
+                            <input formControlName="priority" id="high" type="radio" name="priority" value="4">
+                            <span>
+                                High
+                            </span>
+                            <input formControlName="priority"id="highest" type="radio" name="priority" value="5">
+                            <span>
+                                Highest
+                            </span>
+                        </div>
+                    </div>
+                    <h3>
+                        Image upload 
+                    </h3>
+                    <input class="form_input form_input_file" formControlName="image" type="file" placeholder="choose image">
+                    <h3>
+                        Source(if any) 
+                    </h3>
+                    <input class="form_input" formControlName="source" type="text">
+                    <div class="button_container">
+                        <button (click)="onClickCreate()" class="operation_choice_button">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div *ngIf="showUpdate">
+            <div class="update_container">
+                <h2>Update</h2>
+                <form [formGroup]="updateForm">
+                    <h2>Enter news id to update</h2>
+                    <input class="form_input" formControlName="title" type="text" placeholder="">
+                    <h3>
+                        Title
+                    </h3>
+                    <input class="form_input" formControlName="title" type="text" placeholder="">
+                    <h3>
+                        Description 
+                    </h3>
+                    <input class="form_input" formControlName="description" type="text" placeholder="">
+                    <div>
+                        <h3>
+                            Priority 
+                        </h3>
+                        <div class="priority_options_container">
+                            <input formControlName="priority" id="lowest" type="radio" name="priority" value="1" checked>
+                            <span>
+                                Lowest
+                            </span>
+                            <input formControlName="priority" id="low" type="radio" name="priority" value="2">
+                            <span>
+                                Low
+                            </span>
+                            <input formControlName="priority" id="medium" type="radio" name="priority" value="3">
+                            <span>
+                                Medium
+                            </span>
+                            <input formControlName="priority" id="high" type="radio" name="priority" value="4">
+                            <span>
+                                High
+                            </span>
+                            <input formControlName="priority"id="highest" type="radio" name="priority" value="5">
+                            <span>
+                                Highest
+                            </span>
+                        </div>
+                    </div>
+                    <h3>
+                        Image upload 
+                    </h3>
+                    <input class="form_input form_input_file" formControlName="image" type="file">
+                    <h3>
+                        Source(if any) 
+                    </h3>
+                    <input class="form_input" formControlName="source" type="text">
+                    <div class="button_container">
+                        <button (click)="onClickUpdate()" class="operation_choice_button">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div *ngIf="showDelete">
+            <div class="delete_container">
+                <h2>Delete</h2>
+                <form [formGroup]="createForm">
+                    <h3>
+                        Enter news id to delete
+                    </h3>
+                    <input class="form_input" formControlName="title" type="text">
+                    <div class="button_container">
+                        <button (click)="onClickCreate()" class="operation_choice_button">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
